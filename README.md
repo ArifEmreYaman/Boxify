@@ -55,6 +55,29 @@ cd Boxify-2.0.2
 python boxify.py
 ```
 
+### Windows'ta çalıştırma
+
+Uygulamanın kendisi (`boxify.py` ve `boxify/` paketi) platform bağımsızdır ve Windows'ta da
+çalışır — adımlar 1 ve 2 aynen geçerli, sadece komutları PowerShell/cmd'de çalıştır:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r Boxify-2.0.2\requirements.txt
+cd Boxify-2.0.2
+python boxify.py
+```
+
+Dikkat edilecekler:
+
+- **ffmpeg** Windows'ta otomatik gelmez; [ffmpeg.org](https://ffmpeg.org/download.html)'dan indirip
+  PATH'e eklemen gerekir (Video Kırpıcı ve Kare Alıcı bunu kullanır).
+- **`kur.sh` Linux'a özeldir** (uygulama menüsüne kayıt için); Windows'ta buna gerek yok, uygulama
+  doğrudan `python boxify.py` ile başlatılır.
+- Araçlardaki "çıktı klasörünü aç" butonları `boxify/klasor_ac.py` üzerinden işletim sistemine göre
+  doğru komutu seçer (Windows'ta `os.startfile`, macOS'ta `open`, Linux'ta `xdg-open`) — ek bir
+  ayar gerekmez.
+
 ### 3) (İsteğe bağlı) Linux uygulama menüsüne ekle
 
 Her seferinde terminalden `python boxify.py` yazmak yerine, uygulamayı sistemin uygulama
