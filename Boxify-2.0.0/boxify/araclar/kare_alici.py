@@ -11,6 +11,8 @@ from PyQt5.QtCore import Qt, QUrl, QThread, pyqtSignal
 from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtMultimediaWidgets import QVideoWidget
 
+from ..klasor_ac import klasoru_ac
+
 STYLE = """
 QWidget {
     background-color: #2b2b2b;
@@ -503,7 +505,7 @@ class MainWindow(QMainWindow):
 
     def _open_output_folder(self):
         if self._last_out_dir and os.path.isdir(self._last_out_dir):
-            subprocess.Popen(["xdg-open", self._last_out_dir])
+            klasoru_ac(self._last_out_dir)
 
 
 def main():

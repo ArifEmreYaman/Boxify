@@ -603,8 +603,8 @@ class MainWindow(QMainWindow):
         if not self._out_dir:
             return
         try:
-            import subprocess
-            subprocess.Popen(["xdg-open", self._out_dir])
+            from ..klasor_ac import klasoru_ac
+            klasoru_ac(self._out_dir)
         except Exception as e:
             self.status.showMessage(f"HATA: klasör açılamadı — {e}")
 

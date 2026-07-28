@@ -6,6 +6,15 @@ import shutil
 import subprocess
 
 
+def _klasoru_ac(yol: str) -> None:
+    if sys.platform.startswith("win"):
+        os.startfile(yol)  # type: ignore[attr-defined]
+    elif sys.platform == "darwin":
+        subprocess.Popen(["open", yol])
+    else:
+        subprocess.Popen(["xdg-open", yol])
+
+
 def _fix_gstreamer_glib():
     """conda ortamının glib'i ile sistem gstreamer eklentileri uyuşmadığında
     eklentiler yüklenemiyor:
@@ -1239,7 +1248,7 @@ class MainWindow(QMainWindow):
         out_dir = self._out_dir()
         os.makedirs(out_dir, exist_ok=True)
         try:
-            subprocess.Popen(["xdg-open", out_dir])
+            _klasoru_ac(out_dir)
         except Exception as e:
             self.status.showMessage(f"HATA: klasör açılamadı — {e}")
 

@@ -5,6 +5,8 @@ import json
 import shutil
 import subprocess
 
+from boxify.klasor_ac import klasoru_ac
+
 
 def _fix_gstreamer_glib():
     """conda ortamının glib'i ile sistem gstreamer eklentileri uyuşmadığında
@@ -1239,7 +1241,7 @@ class MainWindow(QMainWindow):
         out_dir = self._out_dir()
         os.makedirs(out_dir, exist_ok=True)
         try:
-            subprocess.Popen(["xdg-open", out_dir])
+            klasoru_ac(out_dir)
         except Exception as e:
             self.status.showMessage(f"HATA: klasör açılamadı — {e}")
 

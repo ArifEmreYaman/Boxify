@@ -12,6 +12,7 @@ from PyQt5.QtMultimedia import QMediaPlayer, QMediaContent
 from PyQt5.QtMultimediaWidgets import QVideoWidget
 
 from ..tema import STYLE  # ortak açık tema — bkz. boxify/tema.py
+from ..klasor_ac import klasoru_ac
 
 
 def ms_to_str(ms: int) -> str:
@@ -438,7 +439,7 @@ class MainWindow(QMainWindow):
 
     def _open_output_folder(self):
         if self._last_out_dir and os.path.isdir(self._last_out_dir):
-            subprocess.Popen(["xdg-open", self._last_out_dir])
+            klasoru_ac(self._last_out_dir)
 
 
 def main():
