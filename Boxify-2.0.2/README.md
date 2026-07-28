@@ -86,7 +86,11 @@ pip install -r requirements.txt   # önerilen: PyQt5 içeren bir conda ortamı
 python boxify.py
 ```
 
-## Uygulama menüsüne kaydetme
+**Windows'ta:** Uygulama platform bağımsızdır, aynı adımlar PowerShell/cmd'de de çalışır. Ayrıca
+**ffmpeg**'i [ffmpeg.org](https://ffmpeg.org/download.html)'dan indirip PATH'e eklemen gerekir
+(Video Kırpıcı ve Kare Alıcı bunu kullanır).
+
+## Uygulama menüsüne kaydetme (Linux)
 
 ```bash
 ./kur.sh          # menüye "Boxify" olarak ekler (boxify.desktop)
@@ -99,13 +103,23 @@ kısayolu yeni yola göre kendisi yeniden yazar.
 
 ![Kurulum terminali](gorseller/kurulum_terminal.png)
 
+## Masaüstü + Başlat Menüsü kısayolu (Windows)
+
+`kur.sh`'ın karşılığı `kur.bat`:
+
+```powershell
+.\kur.bat          # ikon.png'yi ikon.ico'ya çevirir, masaüstü + Başlat Menüsü kısayolu ekler
+.\kur.bat kaldir   # kısayolları kaldırır
+```
+
 ## Dizin yapısı
 
 ```
 Boxify-2.0.2/
 ├── boxify.py                 # başlatıcı (glib düzeltmesi + dil yamaları + QApplication)
 ├── ikon.png                  # uygulama ikonu
-├── kur.sh                    # menü kaydı / kaldırma (boxify.desktop)
+├── kur.sh                    # Linux menü kaydı / kaldırma (boxify.desktop)
+├── kur.bat / kur.ps1         # Windows masaüstü + Başlat Menüsü kısayolu
 ├── requirements.txt
 ├── gorseller/                # ekran görüntüleri
 └── boxify/

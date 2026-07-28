@@ -82,10 +82,9 @@ python boxify.py
 **Windows'ta:** Uygulama platform bağımsızdır, aynı adımlar PowerShell/cmd'de de çalışır. Ayrıca
 **ffmpeg**'i [ffmpeg.org](https://ffmpeg.org/download.html)'dan indirip PATH'e eklemen gerekir
 (Video Kırpıcı ve Kare Alıcı bunu kullanır). "Çıktı klasörünü aç" düğmeleri işletim sistemine göre
-doğru komutu kendisi seçer (Windows'ta `os.startfile`, Linux'ta `xdg-open`). `kur.sh` (aşağıda)
-Linux'a özeldir, Windows'ta gerekmez.
+doğru komutu kendisi seçer (Windows'ta `os.startfile`, Linux'ta `xdg-open`).
 
-## Uygulama menüsüne kaydetme (yalnızca Linux)
+## Uygulama menüsüne kaydetme (Linux)
 
 ```bash
 ./kur.sh          # menüye ekler (ikon.png ile)
@@ -94,13 +93,23 @@ Linux'a özeldir, Windows'ta gerekmez.
 
 `kur.sh`, PyQt5 içeren ilk python'u otomatik seçer.
 
+## Masaüstü + Başlat Menüsü kısayolu (Windows)
+
+`kur.sh`'ın karşılığı `kur.bat`:
+
+```powershell
+.\kur.bat          # ikon.png'yi ikon.ico'ya çevirir, masaüstü + Başlat Menüsü kısayolu ekler
+.\kur.bat kaldir   # kısayolları kaldırır
+```
+
 ## Dizin yapısı
 
 ```
 Boxify-2.0.0/
 ├── boxify.py                 # başlatıcı (glib düzeltmesi + QApplication)
 ├── ikon.png                  # uygulama ikonu
-├── kur.sh                    # menü kaydı / kaldırma
+├── kur.sh                    # Linux menü kaydı / kaldırma
+├── kur.bat / kur.ps1         # Windows masaüstü + Başlat Menüsü kısayolu
 ├── requirements.txt
 ├── gorseller/                # ekran görüntüleri
 └── boxify/
