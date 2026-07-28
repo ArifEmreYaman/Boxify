@@ -45,7 +45,7 @@ conda activate boxify
 pip install -r Boxify-2.0.2/requirements.txt
 ```
 
-PyQt5 + ultralytics içeren bir ortamın zaten varsa (ör. `truck_detect`), doğrudan onu aktive edip
+PyQt5 + ultralytics içeren bir ortamın zaten varsa (ör. `a1b2`), doğrudan onu aktive edip
 devam edebilirsin — `pip install` adımı gerekmez.
 
 ### 2) Uygulamayı çalıştır
