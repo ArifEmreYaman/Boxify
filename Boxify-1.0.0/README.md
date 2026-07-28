@@ -23,6 +23,11 @@ cd videokırpıcı && python main.py     # (her araç için aynı kalıp)
 cd Labelapp/labelapp2 && python main.py
 ```
 
+**Windows'ta:** Aynı komutlar PowerShell/cmd'de de çalışır (`cd videokırpıcı; python main.py`);
+ayrıca **ffmpeg**'i [ffmpeg.org](https://ffmpeg.org/download.html)'dan indirip PATH'e eklemen
+gerekir (Video Kırpıcı ve Kare Alıcı bunu kullanır). "Çıktı klasörünü aç" düğmeleri işletim
+sistemine göre doğru komutu kendisi seçer (Windows'ta `os.startfile`, Linux'ta `xdg-open`).
+
 ## Araçlar
 
 ### ✂ Video Kırpıcı (`videokırpıcı/`)

@@ -79,7 +79,13 @@ pip install -r requirements.txt   # önerilen: PyQt5 içeren bir conda ortamı
 python boxify.py
 ```
 
-## Uygulama menüsüne kaydetme
+**Windows'ta:** Uygulama platform bağımsızdır, aynı adımlar PowerShell/cmd'de de çalışır. Ayrıca
+**ffmpeg**'i [ffmpeg.org](https://ffmpeg.org/download.html)'dan indirip PATH'e eklemen gerekir
+(Video Kırpıcı ve Kare Alıcı bunu kullanır). "Çıktı klasörünü aç" düğmeleri işletim sistemine göre
+doğru komutu kendisi seçer (Windows'ta `os.startfile`, Linux'ta `xdg-open`). `kur.sh` (aşağıda)
+Linux'a özeldir, Windows'ta gerekmez.
+
+## Uygulama menüsüne kaydetme (yalnızca Linux)
 
 ```bash
 ./kur.sh          # menüye ekler (ikon.png ile)
