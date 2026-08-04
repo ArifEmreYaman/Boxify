@@ -297,3 +297,10 @@ Boxify/
 - **Dil mimarisi (2.0.2):** İngilizce, araç kodlarına dokunmadan eklendi — PyQt metin API'leri
   (setText, setToolTip, QMessageBox…) monkey-patch ile bir çeviri sözlüğünden geçirilir.
   Ayrıntı: [`Boxify-2.0.2/README.md`](Boxify-2.0.2/README.md).
+
+---
+
+## Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile yayınlanmıştır. Telif hakkı bildirimini koruduğun sürece
+kodu özgürce kullanabilir, değiştirebilir ve dağıtabilirsin.
